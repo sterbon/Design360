@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { onBackgroundColor, accentColor } from '../../Values/colors';
+import { accentColor } from '../../Values/colors';
 
 const BorderlessButton = ({ children, onPress }) => {
     return (
