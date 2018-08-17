@@ -7,7 +7,6 @@ class LoginPage extends Component {
         return (
             <View>
                 <Header headerText="Login" />
-
             </View>
         );
     }
