@@ -59,4 +59,4 @@ const styles = {
 
 };
 
-export default ConfirmationModal;
+export { ConfirmationModal };
