@@ -26,8 +26,8 @@ const styles = {
 
     imageStyle: {
         resizeMode: 'contain',
-        width: 25,
-        height: 25,
+        width: 150,
+        height: 150,
         tintColor: onBackgroundColor,
         alignSelf: 'center',
     }

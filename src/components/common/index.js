@@ -7,4 +7,4 @@ export * from './Header';
 export * from './HeaderTextInput';
 export * from './Input';
 export * from './Spinner';
-export * from './TouchableImage';
+export * from './SquareButton';
