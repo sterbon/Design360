@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { HeaderTextInput, Card, CardSection } from './common';
 import Item from './item'; 
+import { accentColor } from '../Values/colors';
 
 const styles = StyleSheet.create({
     stretch: {
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
         zIndex: 11,
         right: 20,
         bottom: 90,
-        backgroundColor: '#9C27B0',
+        backgroundColor: accentColor,
         width: 60,
         height: 60,
         borderRadius: 50,
@@ -42,25 +43,16 @@ const styles = StyleSheet.create({
      },
   });
 
-const user = require('../assets/user.png');
 
 class LoginPage extends Component {
     render() {
         return (
             <View>
             <ScrollView>
-               <Card>
-                    <CardSection>
-                    <Image
-                        style={styles.stretch}
-                        source={user}
-                    />
-                    <HeaderTextInput style={styles.search} headerText="Search" />
-                    </CardSection>
-                </Card>
-                    <Item />
-                    <Item />
-                               
+                <HeaderTextInput style={styles.search} placeholder="Search..." />
+                <Item />
+                <Item />                
+                <Item />                
             </ScrollView>
 
             <TouchableOpacity 
