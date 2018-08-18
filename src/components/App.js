@@ -10,11 +10,7 @@ class App extends Component {
     render() {
         return (
             <View>
-<<<<<<< HEAD
                 <ConfirmEvent />
-=======
-                <SignUpPage />
->>>>>>> 41e4dfc39c345ad55f0f9140724d060b9a9b912f
             </View>
         );
     }

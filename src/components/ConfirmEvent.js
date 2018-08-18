@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
 import { Card, CardSection, Button } from './common';
+import { accentColor } from '../Values/colors';
 
 const map = require('../assets/maps_routemap.png');
 const user = require('../assets/user.png');
@@ -18,19 +19,19 @@ class ConfirmEventPage extends Component {
             />
         </CardSection>
         <CardSection>
-            <Button style={styles.button}> Cricket </Button> 
+            <Text style={styles.type}>Cricket</Text> 
         </CardSection>
         <CardSection>
-            <Text style={styles.textStyle}> Date: </Text>
+            <Text style={styles.titleTextStyle}> Date </Text>
             <Text style={styles.textStyle}> 01/08/2018</Text>
         </CardSection>
         
         <CardSection>
-            <Text style={styles.textStyle}> Time: </Text>
+            <Text style={styles.titleTextStyle}> Time </Text>
             <Text style={styles.textStyle}> 7:30 PM</Text>
         </CardSection>
         <CardSection>
-            <Text style={styles.textStyle}> JOINED BY </Text>
+            <Text style={styles.titleTextStyle}> Joined </Text>
             <Text style={styles.textStyle}> 12 </Text>
         </CardSection>
         
@@ -78,9 +79,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  button: {
-      flex: 1
-  },
   map: {
     width: 100,
     height: 150,
@@ -89,21 +87,36 @@ const styles = StyleSheet.create({
   name: {
       flex: 1,
       color: '#fff',
-      textAlign: 'center',
+      textAlign: 'left',
       paddingTop: 16,
+      paddingLeft: 16
   },
   textStyle: {
     flex: 1,
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: 'Barlow-Regular',
     fontSize: 16,
     color: '#fff',
     paddingTop: 16,
-    textAlign: 'center',
-    lineHeight: 50
+    textAlign: 'left',
+    paddingLeft: 16,
+},
+    titleTextStyle: {
+    fontFamily: 'Barlow-SemiBold',
+        paddingLeft: 16,
+        fontSize: 16,
+    color: accentColor,
+    paddingTop: 16,
+    textAlign: 'right',
 },
     user_profile: {
         width: 50,
         height: 50
+    },
+    type: {
+        paddingLeft: 16,
+        fontFamily: 'Barlow-SemiBold',
+        fontSize: 32,
+        color: accentColor
     }
 
 });

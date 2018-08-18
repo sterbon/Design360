@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { ScrollView } from 'react-native';
-import { Header, Input, Card, CardSection } from './common';
-=======
 import { ScrollView, Text } from 'react-native';
 import Moment from 'moment';
 import DateTimePicker from 'react-native-modal-datetime-picker';
@@ -10,7 +6,6 @@ import { Header, Input, Card, CardSection, Button, ButtonSolid, BorderlessButton
 import { 
     onBackgroundColor, 
 } from '../Values/colors';
->>>>>>> 41e4dfc39c345ad55f0f9140724d060b9a9b912f
 
 class SignUpPage extends Component {
     state = {
