@@ -1,11 +1,45 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { ScrollView } from 'react-native';
 import { Header, Input, Card, CardSection } from './common';
+=======
+import { ScrollView, Text } from 'react-native';
+import Moment from 'moment';
+import DateTimePicker from 'react-native-modal-datetime-picker';
+import { Header, Input, Card, CardSection, Button, ButtonSolid, BorderlessButton } from './common';
+import { 
+    onBackgroundColor, 
+} from '../Values/colors';
+>>>>>>> 41e4dfc39c345ad55f0f9140724d060b9a9b912f
 
 class SignUpPage extends Component {
+    state = {
+        isDateTimePickerVisible: false,
+        dateValue: 'Select Date',
+      };
+     
+      showDateTimePicker() {
+          this.setState({ isDateTimePickerVisible: true });
+      }
+     
+      hideDateTimePicker() {
+          this.setState({ isDateTimePickerVisible: false });
+      }
+
+      handleDatePicked(date) {
+        Moment.locale('en');
+        this.setState({ dateValue: Moment(date).format('DD MMM YY').toString() });
+        this.hideDateTimePicker();
+      }
+
     render() {
         return (
             <ScrollView>
+                <DateTimePicker
+                        isVisible={this.state.isDateTimePickerVisible}
+                        onConfirm={this.handleDatePicked.bind(this)}
+                        onCancel={this.hideDateTimePicker}
+                />
                 <Card>
                     <Header headerText="Sign Up" />
                     <CardSection>
@@ -13,6 +47,26 @@ class SignUpPage extends Component {
                     </CardSection>
                     <CardSection>
                         <Input label="Last Name" placeholder="Your Last Name" />
+                    </CardSection>
+                    <CardSection>
+                        <Text style={styles.labelStyle}>
+                            DOB
+                        </Text>
+                        <BorderlessButton onPress={this.showDateTimePicker.bind(this)} >
+                            {this.state.dateValue}
+                        </BorderlessButton>
+                    </CardSection>
+                    <CardSection>
+                        <Input label="Contact" placeholder="Your Contact Number" />
+                    </CardSection>
+                    <CardSection>
+                        <Input label="Street" placeholder="Your Street" />
+                    </CardSection>
+                    <CardSection>
+                        <Input label="City" placeholder="Your City" />
+                    </CardSection>
+                    <CardSection>
+                        <Input label="State" placeholder="Your State" />
                     </CardSection>
                     <CardSection>
                         <Input label="Email ID" placeholder="Your Email ID" />
@@ -27,21 +81,27 @@ class SignUpPage extends Component {
                         <Input label="Confirm Password" placeholder="Confirm Password" />
                     </CardSection>
                     <CardSection>
-                        <Input label="Contact" placeholder="Your Contact Number" />
-                    </CardSection>
-                    <CardSection>
-                        <Input label="Street" placeholder="Your Street" />
-                    </CardSection>
-                    <CardSection>
-                        <Input label="City" placeholder="Your City" />
-                    </CardSection>
-                    <CardSection>
-                        <Input label="State" placeholder="Your State" />
+                        <Button>
+                            Discard
+                        </Button>
+                        <ButtonSolid>
+                            Sign Up
+                        </ButtonSolid>
                     </CardSection>
                 </Card>
             </ScrollView>
         );
     }
 }
+
+const styles = {
+    labelStyle: {
+        fontFamily: 'Barlow-Regular',
+        color: onBackgroundColor,
+        fontSize: 14,
+        paddingLeft: 5,
+        flex: 1
+    }
+};
 
 export default SignUpPage;
