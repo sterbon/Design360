@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { backgroundColor, accentColor } from '../../Values/colors';
+import { backgroundColor, accentColor, onBackgroundColor } from '../../Values/colors';
 
-const Button = ({ children, onPress }) => {
+const ButtonSolid = ({ children, onPress }) => {
     return (
         <TouchableOpacity style={styles.buttonStyle} onPress={onPress}>
             <Text style={styles.textStyle}>
@@ -16,7 +16,7 @@ const styles = {
     buttonStyle: {
         flex: 1,
         alignSelf: 'stretch',
-        backgroundColor,
+        backgroundColor: accentColor,
         borderWidth: 1,
         borderRadius: 3,
         borderColor: accentColor,
@@ -25,8 +25,8 @@ const styles = {
     },
     textStyle: {
         alignSelf: 'center',
-        color: accentColor,
-        fontFamily: 'Barlow-Regular',
+        color: backgroundColor,
+        fontFamily: 'ITC Avant Garde Std Bk',
         fontSize: 16,
         fontWeight: '600',
         paddingTop: 10,
@@ -34,4 +34,4 @@ const styles = {
     }
 };
 
-export { Button };
+export { ButtonSolid };

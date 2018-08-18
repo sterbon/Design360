@@ -30,7 +30,7 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => 
 const styles = {
     inputStyle: {
         height: 40,
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: 'Barlow-Regular',
         color: onBackgroundColor,
         paddingLeft: 12,
         paddingRight: 12,
@@ -42,7 +42,7 @@ const styles = {
         borderWidth: 2,
     },
     labelStyle: {
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: 'Barlow-Regular',
         color: onBackgroundColor,
         fontSize: 14,
         paddingLeft: 5,

@@ -31,7 +31,7 @@ const styles = {
     },
     textStyle: {
         fontSize: 26,
-        fontFamily: 'Montserrat-Bold',
+        fontFamily: 'Barlow-SemiBold',
         color: onBackgroundColor,
         borderBottomWidth: 2,
         paddingBottom: 12,

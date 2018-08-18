@@ -12,7 +12,7 @@ const CardSection = ({ children }) => {
 
 const styles = {
     containerStyle: {
-        padding: 0,
+        padding: 8,
         backgroundColor,
         justifyContent: 'flex-start',
         flexDirection: 'row',

@@ -1,5 +1,6 @@
 export * from './BorderlessButton';
 export * from './Button';
+export * from './ButtonSolid';
 export * from './Card';
 export * from './CardSection';
 export * from './ConfirmationModal';
