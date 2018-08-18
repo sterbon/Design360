@@ -7,7 +7,6 @@ import {
     onBackgroundColor, 
 } from '../Values/colors';
 
-
 class SignUpPage extends Component {
     state = {
         isDateTimePickerVisible: false,
@@ -46,7 +45,7 @@ class SignUpPage extends Component {
                     </CardSection>
                     <CardSection>
                         <Text style={styles.labelStyle}>
-                            Date
+                            DOB
                         </Text>
                         <BorderlessButton onPress={this.showDateTimePicker.bind(this)} >
                             {this.state.dateValue}
