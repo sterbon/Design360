@@ -20,15 +20,12 @@ class LoginPage extends Component {
                         <Input label="Password" placeholder="Your password" secureTextEntry />
                     </CardSection>
                     <CardSection>
-                        <Button onPress={() => Actions.feed()}>
-                            Login
-                        </Button>
-                        <ButtonSolid onPress={() => Actions.signUpPage()}>
+                        <Button onPress={() => Actions.signUpPage()}>
                             Sign Up
-                        </ButtonSolid>
-                        <Button>
-                            Login
                         </Button>
+                        <ButtonSolid onPress={() => Actions.feed()}>
+                            Login
+                        </ButtonSolid>
                     </CardSection>
                     <CardSection>
                         <View style={styles.buttonContainerStyle}>
