@@ -94,7 +94,7 @@ const styles = {
         fontFamily: 'Barlow-Regular',
         color: onBackgroundColor,
         fontSize: 14,
-        paddingLeft: 5,
+        paddingLeft: 17,
         flex: 1
     }
 };

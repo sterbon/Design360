@@ -67,13 +67,7 @@ class CreateLobby extends Component {
                 />
                 <Card>
                     <CardSection>
-                        <Text style={styles.labelStyle}>
-                            Sport
-                        </Text>
-                        <Dropdown
-                            label='Select Sport'
-                            data={sports}
-                        />
+                        <Input label="Sport" placeholder="Enter Sport" />
                     </CardSection>
                     <CardSection>
                         <Text style={styles.labelStyle}>
@@ -90,7 +84,7 @@ class CreateLobby extends Component {
                         <Input label="Group Size: " placeholder="Select Size" />
                     </CardSection>
                     <CardSection>
-                        <Input label="Locality" placeholder="Enter city" />
+                        <Input label="Locality" placeholder="Enter City" />
                     </CardSection>
                     <CardSection>
                         <Input label="Location" placeholder="Select Location" />
@@ -116,7 +110,7 @@ const styles = {
         fontFamily: 'Barlow-Regular',
         color: onBackgroundColor,
         fontSize: 14,
-        paddingLeft: 5,
+        paddingLeft: 17,
         flex: 1
     }
 };
