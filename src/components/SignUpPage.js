@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import { Header, Input, Card, CardSection, Button, SquareButton } from './common';
+import { Header, Input, Card, CardSection, } from './common';
 
 class SignUpPage extends Component {
     render() {
