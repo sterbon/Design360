@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Image, Text } from 'react-native';
-import { Card, CardSection, Button } from './common';
+import { Card, CardSection, Button, BorderlessButton } from './common';
+import { accentColor } from '../Values/colors';
 
 const styles = StyleSheet.create({
     stretch: {
@@ -12,15 +13,16 @@ const styles = StyleSheet.create({
       height: 150,
       flex: 1
     },
-    search: {
-        backgroundColor: '#fff',
-        flex: 1,
-        width: 150
-    },
+    textTitle: {
+        color: accentColor,
+        fontFamily: 'Barlow-SemiBold',
+        flex: 1
+    },   
     text: {
+        fontFamily: 'Barlow-Regular',
         color: '#fff',
         flex: 1
-    }
+    },
   });
   const map = require('../assets/maps_routemap.png');
 
@@ -35,18 +37,18 @@ const styles = StyleSheet.create({
                 />
             </CardSection>
             <CardSection>
-                <Text style={styles.text}> Date: </Text>
+                <Text style={styles.textTitle}> Date </Text>
                 <Text style={styles.text}> 01/08/2018</Text>
-                <Button> Cricket </Button> 
             </CardSection>
             <CardSection>
-                <Text style={styles.text}> Time: </Text>
+                <Text style={styles.textTitle}> Time </Text>
                 <Text style={styles.text}> 7:30 PM</Text>
             </CardSection>
             <CardSection>
-                <Text style={styles.text}> JOINED BY </Text>
+                <Text style={styles.textTitle}> JOINED BY </Text>
                 <Text style={styles.text}> 12 </Text>
             </CardSection>
+            <BorderlessButton> Cricket </BorderlessButton> 
             <CardSection>
                 <Button> JOIN </Button>
             </CardSection>

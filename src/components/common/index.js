@@ -7,5 +7,6 @@ export * from './ConfirmationModal';
 export * from './Header';
 export * from './HeaderTextInput';
 export * from './Input';
+export * from './PureTextInput';
 export * from './Spinner';
 export * from './SquareButton';

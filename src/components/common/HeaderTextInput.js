@@ -1,6 +1,8 @@
 import React from 'react';
-import { TextInput, Text, View } from 'react-native';
+import { TextInput, Image, View } from 'react-native';
 import { onBackgroundColor, accentColor, onBackgroundColorFaded, backgroundColorLight } from '../../Values/colors';
+
+const user = require('../../assets/user.png');
 
 const HeaderTextInput = ({ value, onChangeText, placeholder, secureTextEntry }) => {
     return (
@@ -14,6 +16,10 @@ const HeaderTextInput = ({ value, onChangeText, placeholder, secureTextEntry }) 
                 value={value}
                 onChangeText={onChangeText}
                 underlineColorAndroid='rgba(0,0,0,0)'
+            />
+            <Image
+                style={styles.avatarStyle}
+                source={user}
             />
         </View>
     );
@@ -35,6 +41,10 @@ const styles = {
         backgroundColor: backgroundColorLight,
         borderBottomColor: accentColor,
         borderBottomWidth: 2
+    },
+    avatarStyle: {
+        height: 40,
+        width: 40
     }
 };
 

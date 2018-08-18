@@ -26,6 +26,9 @@ class LoginPage extends Component {
                         <ButtonSolid onPress={() => Actions.signUpPage()}>
                             Sign Up
                         </ButtonSolid>
+                        <Button>
+                            Login
+                        </Button>
                     </CardSection>
                     <CardSection>
                         <View style={styles.buttonContainerStyle}>
