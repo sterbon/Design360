@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+import { Header, Input, Card, CardSection, } from './common';
+=======
 import { ScrollView } from 'react-native';
 import { Header, Input, Card, CardSection, Button, SquareButton } from './common';
+>>>>>>> 294e7296a3d90592cc38904e4d0860115dce23c1
 
 class SignUpPage extends Component {
     render() {
