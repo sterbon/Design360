@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { Header, Input, Card, CardSection, Button, ButtonSolid, SquareButton } from './common';
 import { backgroundColor, accentColor } from '../Values/colors';
 
@@ -19,20 +20,22 @@ class LoginPage extends Component {
                         <Input label="Password" placeholder="Your password" secureTextEntry />
                     </CardSection>
                     <CardSection>
-                        <Button>
+                        <Button onPress={() => Actions.feed()}>
                             Login
                         </Button>
-                        <ButtonSolid>
+                        <ButtonSolid onPress={() => Actions.signUpPage()}>
                             Sign Up
                         </ButtonSolid>
                     </CardSection>
                     <CardSection>
                         <View style={styles.buttonContainerStyle}>
                             <SquareButton 
+                                onPress={() => Actions.feed()}
                                 image={googleImg}
                                 style={{ width: 35, height: 35 }}
                             />
                             <SquareButton 
+                                onPress={() => Actions.feed()}
                                 image={facebookImg} 
                                 style={{ width: 35, height: 35 }}
                             />

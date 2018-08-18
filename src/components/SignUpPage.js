@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { ScrollView } from 'react-native';
-import { Header, Input, Card, CardSection } from './common';
-=======
 import { ScrollView, Text } from 'react-native';
-import Moment from 'moment';
 import DateTimePicker from 'react-native-modal-datetime-picker';
+import Moment from 'moment';
+import { Actions } from 'react-native-router-flux';
 import { Header, Input, Card, CardSection, Button, ButtonSolid, BorderlessButton } from './common';
 import { 
     onBackgroundColor, 
 } from '../Values/colors';
->>>>>>> 41e4dfc39c345ad55f0f9140724d060b9a9b912f
 
 class SignUpPage extends Component {
     state = {
@@ -81,10 +77,10 @@ class SignUpPage extends Component {
                         <Input label="Confirm Password" placeholder="Confirm Password" />
                     </CardSection>
                     <CardSection>
-                        <Button>
+                        <Button onPress={() => Actions.loginPage()}>
                             Discard
                         </Button>
-                        <ButtonSolid>
+                        <ButtonSolid onPress={() => Actions.feed()}>
                             Sign Up
                         </ButtonSolid>
                     </CardSection>

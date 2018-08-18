@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { HeaderTextInput, Card, CardSection } from './common';
 import Item from './item'; 
 
@@ -64,7 +65,7 @@ class LoginPage extends Component {
             </ScrollView>
 
             <TouchableOpacity 
-                onPress={this.addNote}
+                onPress={() => Actions.createLobby()}
                 style={styles.addButton}
             >
             <Text style={styles.addButtonText}>+</Text>

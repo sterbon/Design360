@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Moment from 'moment';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import { ScrollView, Text } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { Dropdown } from 'react-native-material-dropdown';
 import { Card, CardSection, Input, Button, ButtonSolid, BorderlessButton } from './common';
 import { 
@@ -95,7 +96,7 @@ class CreateLobby extends Component {
                 </Card>
                 <Card>
                     <CardSection>
-                        <ButtonSolid>
+                        <ButtonSolid onPress={() => Actions.confirmEvent()}>
                             Create
                         </ButtonSolid>
                     </CardSection>

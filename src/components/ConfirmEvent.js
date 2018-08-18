@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
-import { Card, CardSection, Button } from './common';
+import { Actions } from 'react-native-router-flux';
+import { Card, CardSection, Button, Header } from './common';
 
 const map = require('../assets/maps_routemap.png');
 const user = require('../assets/user.png');
@@ -10,6 +11,7 @@ class ConfirmEventPage extends Component {
     return (
         <ScrollView>
         <ScrollView>
+            <Header headerText="Confirm Event" />
         <Card>
         <CardSection>
             <Image
@@ -66,7 +68,7 @@ class ConfirmEventPage extends Component {
             </Card>
         </ScrollView>
         <CardSection>
-            <Button> CONFIRM EVENT </Button>
+            <Button onPress={() => Actions.feed()}> CONFIRM EVENT </Button>
         </CardSection>
         </ScrollView>
 
