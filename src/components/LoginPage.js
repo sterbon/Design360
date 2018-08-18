@@ -19,12 +19,12 @@ class LoginPage extends Component {
                         <Input label="Password" placeholder="Your password" secureTextEntry />
                     </CardSection>
                     <CardSection>
-                        <Button>
-                            Login
-                        </Button>
                         <ButtonSolid>
                             Sign Up
                         </ButtonSolid>
+                        <Button>
+                            Login
+                        </Button>
                     </CardSection>
                     <CardSection>
                         <View style={styles.buttonContainerStyle}>

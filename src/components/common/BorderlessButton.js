@@ -23,7 +23,7 @@ const styles = {
         textAlign: 'center',
         color: accentColor,
         fontSize: 14,
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: 'Barlow-Regular',
         paddingTop: 10,
         paddingBottom: 10
     }
